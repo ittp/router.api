@@ -1,0 +1,180 @@
+{
+    "success": true,
+    "data": {
+        "menu": [
+            {
+                "name": "status"
+            },
+            {
+                "name": "network",
+                "children": [
+                    {
+                        "name": "internet"
+                    },
+                    {
+                        "name": "lan"
+                    },
+                    {
+                        "name": "iptv"
+                    },
+                    {
+                        "name": "dhcp-Server"
+                    },
+                    {
+                        "name": "dynamic-dns"
+                    },
+                    {
+                        "name": "advanced-routing"
+                    }
+                ]
+            },
+            {
+                "name": "working-mode"
+            },
+            {
+                "name": "wireless",
+                "children": [
+                    {
+                        "name": "wireless-settings"
+                    },
+                    {
+                        "name": "wps"
+                    },
+                    {
+                        "name": "wireless-schedule"
+                    },
+                    {
+                        "name": "one-mesh"
+                    }
+                ]
+            },
+            {
+                "name": "guest-network"
+            },
+            {
+                "name": "usb-settings",
+                "children": [
+                    {
+                        "name": "folder-sharing"
+                    },
+                    {
+                        "name": "time-machine"
+                    }
+                ]
+            },
+            {
+                "name": "parental-control"
+            },
+            {
+                "name": "qos",
+                "children": [
+                    {
+                        "name": "application-priority"
+                    },
+                    {
+                        "name": "device-priority"
+                    }
+                ]
+            },
+            {
+                "name": "security",
+                "children": [
+                    {
+                        "name": "cloud-security"
+                    },
+                    {
+                        "name": "settings"
+                    },
+                    {
+                        "name": "access-control"
+                    },
+                    {
+                        "name": "ip-mac-binding"
+                    }
+                ]
+            },
+            {
+                "name": "nat-forwarding",
+                "children": [
+                    {
+                        "name": "nat"
+                    },
+                    {
+                        "name": "virtual-servers"
+                    },
+                    {
+                        "name": "port-triggering"
+                    },
+                    {
+                        "name": "dmz"
+                    },
+                    {
+                        "name": "upnp"
+                    }
+                ]
+            },
+            {
+                "name": "ipv6"
+            },
+            {
+                "name": "vpn",
+                "children": [
+                    {
+                        "name": "openvpn"
+                    },
+                    {
+                        "name": "pptpvpn"
+                    },
+                    {
+                        "name": "vpnconnections"
+                    }
+                ]
+            },
+            {
+                "name": "smart-life-assistant",
+                "children": [
+                    {
+                        "name": "alexa"
+                    }
+                ]
+            },
+            {
+                "name": "system-tools",
+                "children": [
+                    {
+                        "name": "time-settings"
+                    },
+                    {
+                        "name": "led-control"
+                    },
+                    {
+                        "name": "diagnostic"
+                    },
+                    {
+                        "name": "firmware-upgrade"
+                    },
+                    {
+                        "name": "backup-restore"
+                    },
+                    {
+                        "name": "reboot"
+                    },
+                    {
+                        "name": "administration"
+                    },
+                    {
+                        "name": "system-log"
+                    },
+                    {
+                        "name": "sysstatistics"
+                    },
+                    {
+                        "name": "system-parameters"
+                    }
+                ]
+            }
+        ],
+        "page": "advanced",
+        "model": "archer ax6000"
+    }
+}
