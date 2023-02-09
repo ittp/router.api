@@ -48,13 +48,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Save 
-      run: |
-        echo ${{ github.event.inputs.name }}
-        echo ${{ github.event.inputs.protocol }}
-        echo ${{ github.event.inputs.host }}
-        echo ${{ github.event.inputs.port }}
-  
+
+    
     - name: Create dotenv
     # You may pin to the exact commit or the version.
     # uses: iamsauravsharma/create-dotenv@ace7054d9f54b5b0d2b9a4ef4853d95d4401ce7e
@@ -66,3 +61,13 @@ jobs:
         file-name: .env # optional, default is .env
         # Directory for env file
         directory: . # optional, default is .
+    - name: Save 
+      run: |
+        export URL=`${{ github.event.inputs.protocol }}://${{ github.event.inputs.host }}:${{ github.event.inputs.port }}`
+        echo URL=$URL >> .env
+        echo NAME=${{ github.event.inputs.name }} >> .env
+        echo PROTOCOL=${{ github.event.inputs.protocol }} >> .env
+        echo HOST=${{ github.event.inputs.host }} >> .env
+        echo PORT=${{ github.event.inputs.port }} >> .env
+        
+        cat .env
