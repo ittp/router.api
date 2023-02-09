@@ -16,10 +16,11 @@ on:
         # Input has to be provided for the workflow to run
         required: true
       protocol:
+        type: select
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Port'
         # Default value if no value is explicitly provided
-        default: 'tcp'
+        default: 'http'
         options: [ 'tcp', 'udp' ]
         # Input has to be provided for the workflow to run
         required: true
@@ -70,4 +71,10 @@ jobs:
         echo HOST=${{ github.event.inputs.host }} >> .env
         echo PORT=${{ github.event.inputs.port }} >> .env
         
-        cat .env
+        
+    - name: Webhook
+      uses: zzzze/webhook-trigger@master
+      with:
+        data: "{\"event_type\":\"build\"}"
+        webhook_url: ${{ secrets.WEBHOOK_URL }}
+        options: "-H \"Accept: application/vnd.github.everest-preview+json\" -H \"Authorization: token ${{ secrets.TOKEN }}\""
