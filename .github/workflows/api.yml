@@ -1,0 +1,17 @@
+name: Greetings
+
+on: [workflow_dispatch]
+    
+jobs:
+      auth:
+        runs-on: ubuntu-latest
+        permissions: {}
+        steps:
+          - env:
+              GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              API_URL: ${{ secrets.API_URL }}
+              API_LOGIN: ${{ secrets.PYRUS_LOGIN }}
+              API_TOKEN: ${{ secrets.PYRUS_TOKEN }}
+            run: |
+                 curl --location --request POST '{{ secrets.API_URL }}' --header 'Content-Type: application/json' \
+                 --data-raw '{ "login": "{{ secrets.API_LOGIN }}", "security_key": "{{ secrets.API_TOKEN }}"}'
